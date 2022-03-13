@@ -22,10 +22,87 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.btnRegistrarse = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cjaUsuario = New System.Windows.Forms.TextBox()
+        Me.cjaPassword = New System.Windows.Forms.TextBox()
+        Me.SuspendLayout()
+        '
+        'btnLogin
+        '
+        Me.btnLogin.Location = New System.Drawing.Point(142, 194)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(94, 29)
+        Me.btnLogin.TabIndex = 0
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.UseVisualStyleBackColor = True
+        '
+        'btnRegistrarse
+        '
+        Me.btnRegistrarse.Location = New System.Drawing.Point(272, 194)
+        Me.btnRegistrarse.Name = "btnRegistrarse"
+        Me.btnRegistrarse.Size = New System.Drawing.Size(94, 29)
+        Me.btnRegistrarse.TabIndex = 1
+        Me.btnRegistrarse.Text = "Salir"
+        Me.btnRegistrarse.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(47, 60)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(59, 20)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Usuario"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(47, 109)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 20)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Password"
+        '
+        'cjaUsuario
+        '
+        Me.cjaUsuario.Location = New System.Drawing.Point(152, 57)
+        Me.cjaUsuario.Name = "cjaUsuario"
+        Me.cjaUsuario.Size = New System.Drawing.Size(261, 27)
+        Me.cjaUsuario.TabIndex = 4
+        '
+        'cjaPassword
+        '
+        Me.cjaPassword.Location = New System.Drawing.Point(152, 109)
+        Me.cjaPassword.Name = "cjaPassword"
+        Me.cjaPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.cjaPassword.Size = New System.Drawing.Size(261, 27)
+        Me.cjaPassword.TabIndex = 5
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "Form1"
+        Me.ClientSize = New System.Drawing.Size(497, 298)
+        Me.Controls.Add(Me.cjaPassword)
+        Me.Controls.Add(Me.cjaUsuario)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnRegistrarse)
+        Me.Controls.Add(Me.btnLogin)
+        Me.Name = "Form1"
+        Me.Text = "Login"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents btnRegistrarse As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cjaUsuario As TextBox
+    Friend WithEvents cjaPassword As TextBox
 End Class
