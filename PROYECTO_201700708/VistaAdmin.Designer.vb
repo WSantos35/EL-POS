@@ -74,7 +74,7 @@ Partial Class VistaAdmin
         Me.Controls.Add(Me.btnProductos)
         Me.Controls.Add(Me.btnVendedoress)
         Me.Name = "VistaAdmin"
-        Me.Text = "VistaAdmin"
+        Me.Text = "Admin"
         Me.ResumeLayout(False)
 
     End Sub

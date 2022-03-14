@@ -33,7 +33,7 @@ Partial Class Registro
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btnRegistrar = New System.Windows.Forms.Button()
+        Me.btnRegistrarse = New System.Windows.Forms.Button()
         Me.btnRegresar = New System.Windows.Forms.Button()
         Me.boxSexo = New System.Windows.Forms.ComboBox()
         Me.boxTipoUsuario = New System.Windows.Forms.ComboBox()
@@ -133,14 +133,14 @@ Partial Class Registro
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Fotografia"
         '
-        'btnRegistrar
+        'btnRegistrarse
         '
-        Me.btnRegistrar.Location = New System.Drawing.Point(212, 417)
-        Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(94, 29)
-        Me.btnRegistrar.TabIndex = 16
-        Me.btnRegistrar.Text = "Registrar"
-        Me.btnRegistrar.UseVisualStyleBackColor = True
+        Me.btnRegistrarse.Location = New System.Drawing.Point(212, 417)
+        Me.btnRegistrarse.Name = "btnRegistrarse"
+        Me.btnRegistrarse.Size = New System.Drawing.Size(94, 29)
+        Me.btnRegistrarse.TabIndex = 16
+        Me.btnRegistrarse.Text = "Registrar"
+        Me.btnRegistrarse.UseVisualStyleBackColor = True
         '
         'btnRegresar
         '
@@ -193,7 +193,7 @@ Partial Class Registro
         Me.Controls.Add(Me.boxTipoUsuario)
         Me.Controls.Add(Me.boxSexo)
         Me.Controls.Add(Me.btnRegresar)
-        Me.Controls.Add(Me.btnRegistrar)
+        Me.Controls.Add(Me.btnRegistrarse)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -223,7 +223,7 @@ Partial Class Registro
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents btnRegistrar As Button
+    Friend WithEvents btnRegistrarse As Button
     Friend WithEvents btnRegresar As Button
     Friend WithEvents boxSexo As ComboBox
     Friend WithEvents boxTipoUsuario As ComboBox

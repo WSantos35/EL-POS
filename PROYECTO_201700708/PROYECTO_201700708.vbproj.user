@@ -1,13 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="ConfigPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD_Productos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CRUD_Vendedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Registro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RegistroProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="VistaAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="VistaVendedor.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
