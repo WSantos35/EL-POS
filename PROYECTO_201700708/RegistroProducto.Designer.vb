@@ -32,6 +32,11 @@ Partial Class RegistroProducto
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnProducto_Registrar = New System.Windows.Forms.Button()
         Me.btnProducto_Regresar = New System.Windows.Forms.Button()
+        Me.btnRegistroProd_Actualizar = New System.Windows.Forms.Button()
+        Me.btnProducto_Buscar = New System.Windows.Forms.Button()
+        Me.btnProducto_Eliminar = New System.Windows.Forms.Button()
+        Me.cjaProducto_Codigo = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -101,7 +106,7 @@ Partial Class RegistroProducto
         '
         'btnProducto_Registrar
         '
-        Me.btnProducto_Registrar.Location = New System.Drawing.Point(181, 418)
+        Me.btnProducto_Registrar.Location = New System.Drawing.Point(118, 418)
         Me.btnProducto_Registrar.Name = "btnProducto_Registrar"
         Me.btnProducto_Registrar.Size = New System.Drawing.Size(94, 29)
         Me.btnProducto_Registrar.TabIndex = 8
@@ -110,18 +115,66 @@ Partial Class RegistroProducto
         '
         'btnProducto_Regresar
         '
-        Me.btnProducto_Regresar.Location = New System.Drawing.Point(348, 418)
+        Me.btnProducto_Regresar.Location = New System.Drawing.Point(608, 418)
         Me.btnProducto_Regresar.Name = "btnProducto_Regresar"
         Me.btnProducto_Regresar.Size = New System.Drawing.Size(94, 29)
         Me.btnProducto_Regresar.TabIndex = 9
         Me.btnProducto_Regresar.Text = "Regresar"
         Me.btnProducto_Regresar.UseVisualStyleBackColor = True
         '
+        'btnRegistroProd_Actualizar
+        '
+        Me.btnRegistroProd_Actualizar.Location = New System.Drawing.Point(238, 418)
+        Me.btnRegistroProd_Actualizar.Name = "btnRegistroProd_Actualizar"
+        Me.btnRegistroProd_Actualizar.Size = New System.Drawing.Size(94, 29)
+        Me.btnRegistroProd_Actualizar.TabIndex = 10
+        Me.btnRegistroProd_Actualizar.Text = "Actualizar"
+        Me.btnRegistroProd_Actualizar.UseVisualStyleBackColor = True
+        '
+        'btnProducto_Buscar
+        '
+        Me.btnProducto_Buscar.Location = New System.Drawing.Point(363, 418)
+        Me.btnProducto_Buscar.Name = "btnProducto_Buscar"
+        Me.btnProducto_Buscar.Size = New System.Drawing.Size(94, 29)
+        Me.btnProducto_Buscar.TabIndex = 11
+        Me.btnProducto_Buscar.Text = "Buscar"
+        Me.btnProducto_Buscar.UseVisualStyleBackColor = True
+        '
+        'btnProducto_Eliminar
+        '
+        Me.btnProducto_Eliminar.Location = New System.Drawing.Point(487, 418)
+        Me.btnProducto_Eliminar.Name = "btnProducto_Eliminar"
+        Me.btnProducto_Eliminar.Size = New System.Drawing.Size(94, 29)
+        Me.btnProducto_Eliminar.TabIndex = 12
+        Me.btnProducto_Eliminar.Text = "Eliminar"
+        Me.btnProducto_Eliminar.UseVisualStyleBackColor = True
+        '
+        'cjaProducto_Codigo
+        '
+        Me.cjaProducto_Codigo.Location = New System.Drawing.Point(275, 23)
+        Me.cjaProducto_Codigo.Name = "cjaProducto_Codigo"
+        Me.cjaProducto_Codigo.Size = New System.Drawing.Size(218, 27)
+        Me.cjaProducto_Codigo.TabIndex = 14
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(107, 30)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(58, 20)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Codigo"
+        '
         'RegistroProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(806, 509)
+        Me.Controls.Add(Me.cjaProducto_Codigo)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.btnProducto_Eliminar)
+        Me.Controls.Add(Me.btnProducto_Buscar)
+        Me.Controls.Add(Me.btnRegistroProd_Actualizar)
         Me.Controls.Add(Me.btnProducto_Regresar)
         Me.Controls.Add(Me.btnProducto_Registrar)
         Me.Controls.Add(Me.cjaDescripcionProducto)
@@ -149,4 +202,9 @@ Partial Class RegistroProducto
     Friend WithEvents Label4 As Label
     Friend WithEvents btnProducto_Registrar As Button
     Friend WithEvents btnProducto_Regresar As Button
+    Friend WithEvents btnRegistroProd_Actualizar As Button
+    Friend WithEvents btnProducto_Buscar As Button
+    Friend WithEvents btnProducto_Eliminar As Button
+    Friend WithEvents cjaProducto_Codigo As TextBox
+    Friend WithEvents Label5 As Label
 End Class

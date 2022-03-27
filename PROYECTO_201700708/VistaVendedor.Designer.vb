@@ -26,6 +26,7 @@ Partial Class VistaVendedor
         Me.btnVendedor_Salir = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnVendedor_Buscar = New System.Windows.Forms.Button()
+        Me.btnVendedor_Vender = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnVendedor_Configuracion
@@ -62,11 +63,21 @@ Partial Class VistaVendedor
         Me.btnVendedor_Buscar.Text = "Buscar"
         Me.btnVendedor_Buscar.UseVisualStyleBackColor = True
         '
+        'btnVendedor_Vender
+        '
+        Me.btnVendedor_Vender.Location = New System.Drawing.Point(694, 10)
+        Me.btnVendedor_Vender.Name = "btnVendedor_Vender"
+        Me.btnVendedor_Vender.Size = New System.Drawing.Size(94, 29)
+        Me.btnVendedor_Vender.TabIndex = 4
+        Me.btnVendedor_Vender.Text = "Vender"
+        Me.btnVendedor_Vender.UseVisualStyleBackColor = True
+        '
         'VistaVendedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnVendedor_Vender)
         Me.Controls.Add(Me.btnVendedor_Buscar)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnVendedor_Salir)
@@ -82,4 +93,5 @@ Partial Class VistaVendedor
     Friend WithEvents btnVendedor_Salir As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents btnVendedor_Buscar As Button
+    Friend WithEvents btnVendedor_Vender As Button
 End Class

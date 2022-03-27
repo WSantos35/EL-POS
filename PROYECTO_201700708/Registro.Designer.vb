@@ -23,51 +23,53 @@ Partial Class Registro
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.cjaRegistro_Nombre = New System.Windows.Forms.TextBox()
+        Me.cjaRegistro_Usuario = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.cjaRegistro_Password = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.cjaRegistro_File = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnRegistrarse = New System.Windows.Forms.Button()
         Me.btnRegresar = New System.Windows.Forms.Button()
-        Me.boxSexo = New System.Windows.Forms.ComboBox()
-        Me.boxTipoUsuario = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.cjaRegistro_Sexo = New System.Windows.Forms.ComboBox()
+        Me.cjaRegistro_Tipo = New System.Windows.Forms.ComboBox()
+        Me.cjaRegistro_Fecha = New System.Windows.Forms.DateTimePicker()
+        Me.btnRegistro_Buscar = New System.Windows.Forms.Button()
+        Me.btnRegistro_Eliminar = New System.Windows.Forms.Button()
+        Me.btnRegistro_File = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(125, 52)
+        Me.Label1.Location = New System.Drawing.Point(125, 94)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(64, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre"
         '
-        'TextBox1
+        'cjaRegistro_Nombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(345, 49)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(198, 27)
-        Me.TextBox1.TabIndex = 1
+        Me.cjaRegistro_Nombre.Location = New System.Drawing.Point(345, 91)
+        Me.cjaRegistro_Nombre.Name = "cjaRegistro_Nombre"
+        Me.cjaRegistro_Nombre.Size = New System.Drawing.Size(198, 27)
+        Me.cjaRegistro_Nombre.TabIndex = 1
         '
-        'TextBox2
+        'cjaRegistro_Usuario
         '
-        Me.TextBox2.Location = New System.Drawing.Point(345, 95)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(198, 27)
-        Me.TextBox2.TabIndex = 3
+        Me.cjaRegistro_Usuario.Location = New System.Drawing.Point(345, 47)
+        Me.cjaRegistro_Usuario.Name = "cjaRegistro_Usuario"
+        Me.cjaRegistro_Usuario.Size = New System.Drawing.Size(198, 27)
+        Me.cjaRegistro_Usuario.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(125, 98)
+        Me.Label2.Location = New System.Drawing.Point(125, 50)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(118, 20)
         Me.Label2.TabIndex = 2
@@ -82,13 +84,13 @@ Partial Class Registro
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Fecha Nacimiento"
         '
-        'TextBox4
+        'cjaRegistro_Password
         '
-        Me.TextBox4.Location = New System.Drawing.Point(345, 187)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox4.Size = New System.Drawing.Size(198, 27)
-        Me.TextBox4.TabIndex = 7
+        Me.cjaRegistro_Password.Location = New System.Drawing.Point(345, 187)
+        Me.cjaRegistro_Password.Name = "cjaRegistro_Password"
+        Me.cjaRegistro_Password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.cjaRegistro_Password.Size = New System.Drawing.Size(198, 27)
+        Me.cjaRegistro_Password.TabIndex = 7
         '
         'Label4
         '
@@ -117,12 +119,12 @@ Partial Class Registro
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Tipo Usuario"
         '
-        'TextBox7
+        'cjaRegistro_File
         '
-        Me.TextBox7.Location = New System.Drawing.Point(345, 344)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(198, 27)
-        Me.TextBox7.TabIndex = 13
+        Me.cjaRegistro_File.Location = New System.Drawing.Point(405, 344)
+        Me.cjaRegistro_File.Name = "cjaRegistro_File"
+        Me.cjaRegistro_File.Size = New System.Drawing.Size(198, 27)
+        Me.cjaRegistro_File.TabIndex = 13
         '
         'Label7
         '
@@ -135,7 +137,7 @@ Partial Class Registro
         '
         'btnRegistrarse
         '
-        Me.btnRegistrarse.Location = New System.Drawing.Point(212, 417)
+        Me.btnRegistrarse.Location = New System.Drawing.Point(188, 417)
         Me.btnRegistrarse.Name = "btnRegistrarse"
         Me.btnRegistrarse.Size = New System.Drawing.Size(94, 29)
         Me.btnRegistrarse.TabIndex = 16
@@ -144,66 +146,92 @@ Partial Class Registro
         '
         'btnRegresar
         '
-        Me.btnRegresar.Location = New System.Drawing.Point(362, 417)
+        Me.btnRegresar.Location = New System.Drawing.Point(558, 417)
         Me.btnRegresar.Name = "btnRegresar"
         Me.btnRegresar.Size = New System.Drawing.Size(94, 29)
         Me.btnRegresar.TabIndex = 17
         Me.btnRegresar.Text = "Regresar"
         Me.btnRegresar.UseVisualStyleBackColor = True
         '
-        'boxSexo
+        'cjaRegistro_Sexo
         '
-        Me.boxSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.boxSexo.FormattingEnabled = True
-        Me.boxSexo.Items.AddRange(New Object() {"Masculino", "Femenino", "Indefinido"})
-        Me.boxSexo.Location = New System.Drawing.Point(345, 237)
-        Me.boxSexo.Name = "boxSexo"
-        Me.boxSexo.Size = New System.Drawing.Size(198, 28)
-        Me.boxSexo.TabIndex = 18
+        Me.cjaRegistro_Sexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cjaRegistro_Sexo.FormattingEnabled = True
+        Me.cjaRegistro_Sexo.Items.AddRange(New Object() {"Masculino", "Femenino", "Indefinido"})
+        Me.cjaRegistro_Sexo.Location = New System.Drawing.Point(345, 237)
+        Me.cjaRegistro_Sexo.Name = "cjaRegistro_Sexo"
+        Me.cjaRegistro_Sexo.Size = New System.Drawing.Size(198, 28)
+        Me.cjaRegistro_Sexo.TabIndex = 18
         '
-        'boxTipoUsuario
+        'cjaRegistro_Tipo
         '
-        Me.boxTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.boxTipoUsuario.FormattingEnabled = True
-        Me.boxTipoUsuario.Items.AddRange(New Object() {"Administrador", "Vendedor"})
-        Me.boxTipoUsuario.Location = New System.Drawing.Point(345, 293)
-        Me.boxTipoUsuario.Name = "boxTipoUsuario"
-        Me.boxTipoUsuario.Size = New System.Drawing.Size(198, 28)
-        Me.boxTipoUsuario.TabIndex = 19
+        Me.cjaRegistro_Tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cjaRegistro_Tipo.FormattingEnabled = True
+        Me.cjaRegistro_Tipo.Items.AddRange(New Object() {"Administrador", "Vendedor"})
+        Me.cjaRegistro_Tipo.Location = New System.Drawing.Point(345, 293)
+        Me.cjaRegistro_Tipo.Name = "cjaRegistro_Tipo"
+        Me.cjaRegistro_Tipo.Size = New System.Drawing.Size(198, 28)
+        Me.cjaRegistro_Tipo.TabIndex = 19
         '
-        'DateTimePicker1
+        'cjaRegistro_Fecha
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(345, 139)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(129, 27)
-        Me.DateTimePicker1.TabIndex = 20
-        Me.DateTimePicker1.Value = New Date(2022, 3, 12, 0, 0, 0, 0)
+        Me.cjaRegistro_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.cjaRegistro_Fecha.Location = New System.Drawing.Point(345, 139)
+        Me.cjaRegistro_Fecha.Name = "cjaRegistro_Fecha"
+        Me.cjaRegistro_Fecha.Size = New System.Drawing.Size(129, 27)
+        Me.cjaRegistro_Fecha.TabIndex = 20
+        Me.cjaRegistro_Fecha.Value = New Date(2022, 3, 12, 0, 0, 0, 0)
         '
-        'OpenFileDialog1
+        'btnRegistro_Buscar
         '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.btnRegistro_Buscar.Location = New System.Drawing.Point(314, 417)
+        Me.btnRegistro_Buscar.Name = "btnRegistro_Buscar"
+        Me.btnRegistro_Buscar.Size = New System.Drawing.Size(94, 29)
+        Me.btnRegistro_Buscar.TabIndex = 21
+        Me.btnRegistro_Buscar.Text = "Buscar"
+        Me.btnRegistro_Buscar.UseVisualStyleBackColor = True
+        '
+        'btnRegistro_Eliminar
+        '
+        Me.btnRegistro_Eliminar.Location = New System.Drawing.Point(430, 417)
+        Me.btnRegistro_Eliminar.Name = "btnRegistro_Eliminar"
+        Me.btnRegistro_Eliminar.Size = New System.Drawing.Size(94, 29)
+        Me.btnRegistro_Eliminar.TabIndex = 22
+        Me.btnRegistro_Eliminar.Text = "Eliminar"
+        Me.btnRegistro_Eliminar.UseVisualStyleBackColor = True
+        '
+        'btnRegistro_File
+        '
+        Me.btnRegistro_File.Location = New System.Drawing.Point(345, 344)
+        Me.btnRegistro_File.Name = "btnRegistro_File"
+        Me.btnRegistro_File.Size = New System.Drawing.Size(54, 27)
+        Me.btnRegistro_File.TabIndex = 23
+        Me.btnRegistro_File.Text = "File..."
+        Me.btnRegistro_File.UseVisualStyleBackColor = True
         '
         'Registro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(806, 509)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.boxTipoUsuario)
-        Me.Controls.Add(Me.boxSexo)
+        Me.Controls.Add(Me.btnRegistro_File)
+        Me.Controls.Add(Me.btnRegistro_Eliminar)
+        Me.Controls.Add(Me.btnRegistro_Buscar)
+        Me.Controls.Add(Me.cjaRegistro_Fecha)
+        Me.Controls.Add(Me.cjaRegistro_Tipo)
+        Me.Controls.Add(Me.cjaRegistro_Sexo)
         Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.btnRegistrarse)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.cjaRegistro_File)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.cjaRegistro_Password)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.cjaRegistro_Usuario)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.cjaRegistro_Nombre)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Registro"
         Me.Text = "Registro"
@@ -213,20 +241,22 @@ Partial Class Registro
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents cjaRegistro_Nombre As TextBox
+    Friend WithEvents cjaRegistro_Usuario As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents cjaRegistro_Password As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents cjaRegistro_File As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents btnRegistrarse As Button
     Friend WithEvents btnRegresar As Button
-    Friend WithEvents boxSexo As ComboBox
-    Friend WithEvents boxTipoUsuario As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents cjaRegistro_Sexo As ComboBox
+    Friend WithEvents cjaRegistro_Tipo As ComboBox
+    Friend WithEvents cjaRegistro_Fecha As DateTimePicker
+    Friend WithEvents btnRegistro_Buscar As Button
+    Friend WithEvents btnRegistro_Eliminar As Button
+    Friend WithEvents btnRegistro_File As Button
 End Class
