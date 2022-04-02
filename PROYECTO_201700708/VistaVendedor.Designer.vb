@@ -77,6 +77,7 @@ Partial Class VistaVendedor
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnVendedor_Vender)
         Me.Controls.Add(Me.btnVendedor_Buscar)
         Me.Controls.Add(Me.TextBox1)

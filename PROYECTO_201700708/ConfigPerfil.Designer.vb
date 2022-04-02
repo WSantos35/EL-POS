@@ -160,6 +160,7 @@ Partial Class ConfigPerfil
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnPerfil_Rotar)
         Me.Controls.Add(Me.btnPerfil_Actualizar)
         Me.Controls.Add(Me.cjaPerfil_Password)

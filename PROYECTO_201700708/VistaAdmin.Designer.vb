@@ -79,6 +79,7 @@ Partial Class VistaAdmin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnAdmin_Perfil)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnReportes)

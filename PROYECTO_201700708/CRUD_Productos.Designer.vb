@@ -49,6 +49,7 @@ Partial Class CRUD_Productos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1084, 516)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnProductos_Regresar)
         Me.Controls.Add(Me.btnProductos_Registrarse)
         Me.Name = "CRUD_Productos"

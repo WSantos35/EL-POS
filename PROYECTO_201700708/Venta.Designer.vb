@@ -157,6 +157,7 @@ Partial Class Venta
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(806, 509)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnVenta_Cancelar)
         Me.Controls.Add(Me.btnVenta_Aceptar)
         Me.Controls.Add(Me.cjaVenta_Precio)
