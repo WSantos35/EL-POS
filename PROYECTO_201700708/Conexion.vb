@@ -17,6 +17,7 @@ Public Class Conexion
     Public TipoUser As String = ""
     Public CodUser As Integer = 0
     Public Fotografia As String = ""
+    Dim img As Image
     'USUARIOS GENERALES
     Dim LocUser As String = ""
     Dim LocNombre As String = ""
@@ -69,8 +70,8 @@ Public Class Conexion
                 Me.Nombre = ValoresTabla.Item(1).ToString()
                 Me.FechaNac = ValoresTabla.Item(2).ToString()
                 Me.Sexo = ValoresTabla.Item(3).ToString()
-                Me.Password = ValoresTabla.Item(4).ToString()
-                Me.User = ValoresTabla.Item(5).ToString()
+                Me.User = ValoresTabla.Item(4).ToString()
+                Me.Password = ValoresTabla.Item(5).ToString()
                 Me.TipoUser = ValoresTabla.Item(6).ToString()
                 Me.Fotografia = ValoresTabla.Item(7).ToString()
             End While
@@ -102,9 +103,9 @@ Public Class Conexion
 
                 Me.LocUser = ValoresTabla.Item(4).ToString()
                 Me.LocTipoUser = ValoresTabla.Item(5).ToString()
-                If Me.LocTipoUser = "A" Then
+                If Me.LocTipoUser = "2" Then
                     Me.LocTipoUser = "Administrador"
-                ElseIf Me.LocTipoUser = "V" Then
+                ElseIf Me.LocTipoUser = "1" Then
                     Me.LocTipoUser = "Vendedor"
                 End If
                 dg.Rows.Add(Me.LocCodUser, Me.LocNombre, Me.LocFechaNac, Me.LocSexo, Me.LocUser, Me.LocTipoUser)
@@ -139,6 +140,21 @@ Public Class Conexion
             execute.Clone()
         Catch ex As Exception
             MessageBox.Show("NO SE PUDO REGISTRAR USUARIO, ERROR: " & ex.ToString())
+        End Try
+    End Sub
+
+    Public Sub AsignarPerfil(Nom As TextBox, sex As TextBox, fec As TextBox, user As TextBox, pasw As TextBox, fot As PictureBox)
+        Try
+            Nom.Text = Me.Nombre
+            sex.Text = Me.Sexo
+            fec.Text = Me.FechaNac
+            user.Text = Me.User
+            pasw.Text = Me.Password
+            img = Image.FromFile(Me.Fotografia)
+            fot.SizeMode = PictureBoxSizeMode.Zoom 'PictureBoxSizeMode.Zoom
+            fot.Image = img
+        Catch ex As Exception
+
         End Try
     End Sub
 End Class

@@ -22,4 +22,10 @@
         Reportes.Show()
         Me.Hide()
     End Sub
+
+    Private Sub btnAdmin_Perfil_Click(sender As Object, e As EventArgs) Handles btnAdmin_Perfil.Click
+        Form1.Conexion.AsignarPerfil(ConfigPerfil.cjaPerfil_Nombre, ConfigPerfil.cjaPerfil_Sexo, ConfigPerfil.cjaPerfil_FechaNac, ConfigPerfil.cjaPerfil_Usuario, ConfigPerfil.cjaPerfil_Password, ConfigPerfil.pb_ImagePerfil)
+        ConfigPerfil.Show()
+        Me.Hide()
+    End Sub
 End Class

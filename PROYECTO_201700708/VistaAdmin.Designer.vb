@@ -26,6 +26,7 @@ Partial Class VistaAdmin
         Me.btnProductos = New System.Windows.Forms.Button()
         Me.btnReportes = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnAdmin_Perfil = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnVendedoress
@@ -57,18 +58,28 @@ Partial Class VistaAdmin
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(620, 378)
+        Me.btnSalir.Location = New System.Drawing.Point(657, 393)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(145, 48)
+        Me.btnSalir.Size = New System.Drawing.Size(108, 33)
         Me.btnSalir.TabIndex = 3
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'btnAdmin_Perfil
+        '
+        Me.btnAdmin_Perfil.Location = New System.Drawing.Point(544, 393)
+        Me.btnAdmin_Perfil.Name = "btnAdmin_Perfil"
+        Me.btnAdmin_Perfil.Size = New System.Drawing.Size(88, 33)
+        Me.btnAdmin_Perfil.TabIndex = 4
+        Me.btnAdmin_Perfil.Text = "Perfil"
+        Me.btnAdmin_Perfil.UseVisualStyleBackColor = True
         '
         'VistaAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnAdmin_Perfil)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnReportes)
         Me.Controls.Add(Me.btnProductos)
@@ -83,4 +94,5 @@ Partial Class VistaAdmin
     Friend WithEvents btnProductos As Button
     Friend WithEvents btnReportes As Button
     Friend WithEvents btnSalir As Button
+    Friend WithEvents btnAdmin_Perfil As Button
 End Class

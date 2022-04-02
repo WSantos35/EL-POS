@@ -18,7 +18,7 @@
 
     Private Sub btnRegistrarse_Click(sender As Object, e As EventArgs) Handles btnRegistrarse.Click
         Nombre = cjaRegistro_Nombre.Text
-        Fecha = cjaRegistro_Fecha.Text
+        Fecha = Format(CDate(cjaRegistro_Fecha.Text), "yyyyMMdd")
         Sexo = cjaRegistro_Sexo.Text
         If Sexo = "Masculino" Then
             Sexo = "M"
@@ -31,15 +31,15 @@
         User = cjaRegistro_Usuario.Text
         Tipo = cjaRegistro_Tipo.Text
         If Tipo = "Vendedor" Then
-            Tipo = "V"
+            Tipo = "1"
         ElseIf Tipo = "Administrador" Then
-            Tipo = "A"
+            Tipo = "2"
         End If
         Foto = cjaRegistro_File.Text
 
         If Nombre <> "" And Fecha <> "" And Sexo <> "" And Password <> "" And User <> "" And Tipo <> "" And Foto <> "" Then
-            Query = "INSERT INTO VENDEDOR(NOMBRE,FECHA_NACIMIENTO,SEXO,PASSWORD,USUARIO,TIPO,FOTOGRAFIA) VALUES('" & Nombre & "','" & Fecha & "','" & Sexo &
-                "','" & Password & "','" & User & "','" & Tipo & "','" & Foto & "')"
+            Query = "INSERT INTO vendedor(nombre,fecha_nacimiento,sexo,contrasenia,usuario,tipo,foto) VALUES('" & Nombre & "','" & Fecha & "','" & Sexo &
+                "','" & Password & "','" & User & "'," & Integer.Parse(Tipo) & ",'" & Foto & "')"
             Form1.Conexion.RegistrarUsuario(Query)
             LimpiarRegistros()
         Else

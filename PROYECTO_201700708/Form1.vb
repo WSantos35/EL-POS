@@ -17,12 +17,16 @@
         User = cjaUsuario.Text
         Password = cjaPassword.Text
         If Conexion.getStatus() Then
-            Query = "SELECT * FROM VENDEDOR WHERE USUARIO='" & User & "' AND PASSWORD='" & Password & "'"
+            Query = "SELECT * FROM vendedor WHERE usuario='" & User & "' AND contrasenia='" & Password & "'"
             Conexion.ExecuteLogin(Query)
-            If Conexion.TipoUser = "A" Then
+            If Conexion.TipoUser = "2" Then
+                cjaUsuario.Text = ""
+                cjaPassword.Text = ""
                 VistaAdmin.Show()
                 Me.Hide()
-            ElseIf Me.Conexion.TipoUser = "V" Then
+            ElseIf Me.Conexion.TipoUser = "1" Then
+                cjaUsuario.Text = ""
+                cjaPassword.Text = ""
                 VistaVendedor.Show()
                 Me.Hide()
             Else

@@ -6,6 +6,7 @@
     End Sub
 
     Private Sub btnVendedor_Configuracion_Click(sender As Object, e As EventArgs) Handles btnVendedor_Configuracion.Click
+        Form1.Conexion.AsignarPerfil(ConfigPerfil.cjaPerfil_Nombre, ConfigPerfil.cjaPerfil_Sexo, ConfigPerfil.cjaPerfil_FechaNac, ConfigPerfil.cjaPerfil_Usuario, ConfigPerfil.cjaPerfil_Password, ConfigPerfil.pb_ImagePerfil)
         ConfigPerfil.Show()
         Me.Hide()
     End Sub

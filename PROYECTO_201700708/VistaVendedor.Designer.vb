@@ -31,11 +31,11 @@ Partial Class VistaVendedor
         '
         'btnVendedor_Configuracion
         '
-        Me.btnVendedor_Configuracion.Location = New System.Drawing.Point(504, 399)
+        Me.btnVendedor_Configuracion.Location = New System.Drawing.Point(529, 399)
         Me.btnVendedor_Configuracion.Name = "btnVendedor_Configuracion"
-        Me.btnVendedor_Configuracion.Size = New System.Drawing.Size(121, 30)
+        Me.btnVendedor_Configuracion.Size = New System.Drawing.Size(96, 30)
         Me.btnVendedor_Configuracion.TabIndex = 0
-        Me.btnVendedor_Configuracion.Text = "Configuracion"
+        Me.btnVendedor_Configuracion.Text = "Perfil"
         Me.btnVendedor_Configuracion.UseVisualStyleBackColor = True
         '
         'btnVendedor_Salir
