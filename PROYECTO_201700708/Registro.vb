@@ -70,4 +70,23 @@
         cjaRegistro_Tipo.Text = ""
         cjaRegistro_Usuario.Text = ""
     End Sub
+
+    Private Sub btnRegistro_Buscar_Click(sender As Object, e As EventArgs) Handles btnRegistro_Buscar.Click
+        If cjaRegistro_Usuario.Text.Equals("") Then
+            MessageBox.Show("Ingrese el usuario del vendedor a buscar")
+        Else
+            Query = "SELECT nombre,fecha_nacimiento,sexo,usuario,contrasenia,tipo FROM VENDEDOR WHERE usuario='" & cjaRegistro_Usuario.Text & "'"
+            Form1.Conexion.BUSCAR_USUARIOS(Query)
+        End If
+    End Sub
+
+    Private Sub btnRegistro_Eliminar_Click(sender As Object, e As EventArgs) Handles btnRegistro_Eliminar.Click
+        If cjaRegistro_Usuario.Text.Equals("") Then
+            MessageBox.Show("Ingrese el usuario del vendedor a eliminar")
+        Else
+            Query = "DELETE vendedor WHERE usuario='" & cjaRegistro_Usuario.Text & "'"
+            Form1.Conexion.ExecuteQuery(Query, "USUARIO ELIMINADO EXITOSAMENTE", "USUARIO NO EXISTE")
+            LimpiarRegistros()
+        End If
+    End Sub
 End Class

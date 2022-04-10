@@ -194,12 +194,8 @@ Partial Class RegistroProducto
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents cjaNombreProducto As TextBox
-    Friend WithEvents cjaPrecioProducto As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents cjaExistenciasProducto As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents cjaDescripcionProducto As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents btnProducto_Registrar As Button
     Friend WithEvents btnProducto_Regresar As Button
@@ -208,4 +204,8 @@ Partial Class RegistroProducto
     Friend WithEvents btnProducto_Eliminar As Button
     Friend WithEvents cjaProducto_Codigo As TextBox
     Friend WithEvents Label5 As Label
+    Public WithEvents cjaNombreProducto As TextBox
+    Public WithEvents cjaPrecioProducto As TextBox
+    Public WithEvents cjaExistenciasProducto As TextBox
+    Public WithEvents cjaDescripcionProducto As TextBox
 End Class

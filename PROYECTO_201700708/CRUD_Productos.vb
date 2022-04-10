@@ -8,4 +8,8 @@
         VistaAdmin.Show()
         Me.Hide()
     End Sub
+
+    Public Sub MostrarProductos()
+
+    End Sub
 End Class

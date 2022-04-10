@@ -14,6 +14,8 @@
     End Sub
 
     Private Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
+        Query = "SELECT * FROM producto"
+        Form1.Conexion.MostrarTablaProductos(CRUD_Productos.dgv_TablaProductos, Query)
         CRUD_Productos.Show()
         Me.Hide()
     End Sub

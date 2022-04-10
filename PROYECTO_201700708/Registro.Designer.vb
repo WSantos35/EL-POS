@@ -242,11 +242,8 @@ Partial Class Registro
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents cjaRegistro_Nombre As TextBox
-    Friend WithEvents cjaRegistro_Usuario As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents cjaRegistro_Password As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
@@ -254,10 +251,13 @@ Partial Class Registro
     Friend WithEvents Label7 As Label
     Friend WithEvents btnRegistrarse As Button
     Friend WithEvents btnRegresar As Button
-    Friend WithEvents cjaRegistro_Sexo As ComboBox
-    Friend WithEvents cjaRegistro_Tipo As ComboBox
-    Friend WithEvents cjaRegistro_Fecha As DateTimePicker
     Friend WithEvents btnRegistro_Buscar As Button
     Friend WithEvents btnRegistro_Eliminar As Button
     Friend WithEvents btnRegistro_File As Button
+    Public WithEvents cjaRegistro_Nombre As TextBox
+    Public WithEvents cjaRegistro_Usuario As TextBox
+    Public WithEvents cjaRegistro_Password As TextBox
+    Public WithEvents cjaRegistro_Sexo As ComboBox
+    Public WithEvents cjaRegistro_Tipo As ComboBox
+    Public WithEvents cjaRegistro_Fecha As DateTimePicker
 End Class
