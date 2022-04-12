@@ -60,7 +60,55 @@ select count(*) as Total_Vendedores from vendedor
 
 select sum(codigo_vendedor) from vendedor
 
+--cantidad de ventas que posee cada vendedor
 select nombre ,count(*) as Total_Ventas from vendedor inner join venta on vendedor.tipo =1
 	and venta.codigo_vendedor=vendedor.codigo_vendedor
 	group by vendedor.codigo_vendedor,vendedor.nombre
 	order by 2 desc
+
+--cantidad de veces que se a vendido cada producto
+SELECT P.nombre, COUNT(P.codigo_producto) as cantidad_ventas
+	FROM detalle_venta DV,	producto P
+	WHERE DV.codigo_producto=P.codigo_producto
+	GROUP BY P.nombre, P.codigo_producto
+	ORDER BY 2 DESC
+
+--numero de veces que a vendido cada vendedor un producto
+SELECT VEND.nombre,P.nombre, COUNT(P.codigo_producto) as cantidad_ventas
+	FROM detalle_venta DV,	producto P, vendedor VEND, venta VENT
+	WHERE DV.codigo_producto=P.codigo_producto
+	AND VEND.codigo_vendedor=VENT.codigo_vendedor AND VENT.codigo_venta=DV.codigo_venta
+	GROUP BY P.nombre, P.codigo_producto,VEND.nombre,VEND.codigo_vendedor
+	ORDER BY 2 DESC
+
+-- TOP 3 PRODUCTOS MÁS VENDIDOS
+-- TOP 3 VENDEDORES CON MAS VENTAS
+-- TOP 3 VENDEDORES CON MENOS VENTAS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select * from venta;
+select * from detalle_venta
+select * from producto
+SELECT MAX(codigo_venta) FROM venta
+INSERT INTO venta(nombre_cliente,nit_cliente,total_pagar,codigo_vendedor) VALUES('','',,)
+INSERT INTO detalle_venta(codigo_venta,codigo_producto,cantidad_producto) SELECT MAX(codigo_venta) as codigo_venta,4 as codigo_producto,2 as cantidad_producto FROM venta
+
+
+
+
+UPDATE producto SET stock=stock-2 WHERE codigo_producto=2

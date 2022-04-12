@@ -194,9 +194,25 @@ Public Class Conexion
             End If
             execute.Clone()
         Catch ex As Exception
-            MessageBox.Show("NO SE PUDO REGISTRAR USUARIO, ERROR: " & ex.ToString())
+            MessageBox.Show("ERROR: " & ex.ToString())
         End Try
     End Sub
+
+    Function ExecuteQuery2(Query As String, error2 As String) As Boolean
+        Try
+            execute = New SqlCommand(Query, myConextion)
+            If execute.ExecuteNonQuery() > 0 Then
+                Return True
+            Else
+                MessageBox.Show(error2)
+                Return False
+            End If
+            execute.Clone()
+        Catch ex As Exception
+            MessageBox.Show("ERROR: " & ex.ToString())
+            Return False
+        End Try
+    End Function
     Public Sub BUSCAR_USUARIOS(Query As String)
         Lectura = True
         Try
@@ -259,4 +275,68 @@ Public Class Conexion
             Return "Indefinido"
         End If
     End Function
+
+    Sub BUSCAR_PRODUCTOVENTA(Query As String)
+        Lectura = True
+        Try
+            execute = New SqlCommand(Query, myConextion)
+            ValoresTabla = execute.ExecuteReader
+            Venta.CodProducto = ""
+            While ValoresTabla.Read
+                Venta.CodProducto = ValoresTabla.Item(0).ToString()
+                Venta.cjaVenta_Producto.Text = ValoresTabla.Item(1).ToString()
+                Venta.cjaVenta_Precio.Text = Decimal.Parse(ValoresTabla.Item(2).ToString())
+                Lectura = False
+            End While
+            ValoresTabla.Close()
+            execute.Clone()
+            If Lectura Then
+                Venta.CodProducto = ""
+                MessageBox.Show("Sin producto Existente")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("NO SE PUDO OBTENER DATOS, ERROR: " & ex.ToString())
+        End Try
+    End Sub
+
+    Public Sub Reporte1_Reporte2(dg As DataGridView, Query As String)
+        Try
+            dg.Rows.Clear()
+            execute = New SqlCommand(Query, myConextion)
+            ValoresTabla = execute.ExecuteReader
+            Dim Nombre As String = ""
+            Dim totalVentas As String = ""
+            While ValoresTabla.Read
+                Nombre = ValoresTabla.Item(0).ToString()
+                totalVentas = ValoresTabla.Item(1).ToString()
+                dg.Rows.Add(Nombre, totalVentas)
+            End While
+            ValoresTabla.Close()
+            execute.Clone()
+        Catch ex As Exception
+            MessageBox.Show("NO SE PUDO OBTENER DATOS, ERROR: " & ex.ToString())
+        End Try
+    End Sub
+
+    Public Sub Reporte3(dg As DataGridView, Query As String)
+        Try
+            dg.Rows.Clear()
+            execute = New SqlCommand(Query, myConextion)
+            ValoresTabla = execute.ExecuteReader
+            Dim NombreVendedor As String = ""
+            Dim NombreProducto As String = ""
+            Dim totalVentas As String = ""
+            While ValoresTabla.Read
+                NombreVendedor = ValoresTabla.Item(0).ToString()
+                NombreProducto = ValoresTabla.Item(1).ToString()
+                totalVentas = ValoresTabla.Item(2).ToString()
+                dg.Rows.Add(NombreVendedor, NombreProducto, totalVentas)
+            End While
+            ValoresTabla.Close()
+            execute.Clone()
+        Catch ex As Exception
+            MessageBox.Show("NO SE PUDO OBTENER DATOS, ERROR: " & ex.ToString())
+        End Try
+    End Sub
+
 End Class

@@ -25,6 +25,8 @@
                 VistaAdmin.Show()
                 Me.Hide()
             ElseIf Me.Conexion.TipoUser = "1" Then
+                Query = "SELECT * FROM PRODUCTO"
+                Conexion.MostrarTablaProductos(VistaVendedor.dgv_VVProductos, Query)
                 cjaUsuario.Text = ""
                 cjaPassword.Text = ""
                 VistaVendedor.Show()
