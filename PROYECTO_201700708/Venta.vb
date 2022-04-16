@@ -32,7 +32,7 @@
     End Sub
 
     Private Sub limpiarVariables()
-        cjaVenta_Cantidad.Text = ""
+        'cjaVenta_Cantidad.Text = ""
         cjaVenta_Codigo.Text = ""
         cjaVenta_NIT.Text = ""
         cjaVenta_NombreCliente.Text = ""

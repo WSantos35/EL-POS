@@ -76,6 +76,7 @@ Partial Class ConfigPerfil
         '
         Me.cjaPerfil_Sexo.Location = New System.Drawing.Point(354, 104)
         Me.cjaPerfil_Sexo.Name = "cjaPerfil_Sexo"
+        Me.cjaPerfil_Sexo.ReadOnly = True
         Me.cjaPerfil_Sexo.Size = New System.Drawing.Size(267, 27)
         Me.cjaPerfil_Sexo.TabIndex = 5
         '
@@ -92,6 +93,7 @@ Partial Class ConfigPerfil
         '
         Me.cjaPerfil_FechaNac.Location = New System.Drawing.Point(420, 147)
         Me.cjaPerfil_FechaNac.Name = "cjaPerfil_FechaNac"
+        Me.cjaPerfil_FechaNac.ReadOnly = True
         Me.cjaPerfil_FechaNac.Size = New System.Drawing.Size(201, 27)
         Me.cjaPerfil_FechaNac.TabIndex = 7
         '
@@ -108,6 +110,7 @@ Partial Class ConfigPerfil
         '
         Me.cjaPerfil_Usuario.Location = New System.Drawing.Point(354, 199)
         Me.cjaPerfil_Usuario.Name = "cjaPerfil_Usuario"
+        Me.cjaPerfil_Usuario.ReadOnly = True
         Me.cjaPerfil_Usuario.Size = New System.Drawing.Size(267, 27)
         Me.cjaPerfil_Usuario.TabIndex = 9
         '

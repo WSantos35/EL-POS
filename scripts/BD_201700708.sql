@@ -82,11 +82,23 @@ SELECT VEND.nombre,P.nombre, COUNT(P.codigo_producto) as cantidad_ventas
 	ORDER BY 2 DESC
 
 -- TOP 3 PRODUCTOS MÁS VENDIDOS
+SELECT TOP 3 P.nombre, SUM(DV.cantidad_producto) AS CANTIDAD
+	FROM producto P, detalle_venta DV
+	WHERE P.codigo_producto=DV.codigo_producto
+	GROUP BY P.nombre
+	ORDER BY SUM(DV.cantidad_producto) DESC
 -- TOP 3 VENDEDORES CON MAS VENTAS
+SELECT TOP 3 VEND.nombre,COUNT(VENT.codigo_vendedor) AS CANTIDAD
+	FROM vendedor VEND, venta VENT
+	WHERE VEND.codigo_vendedor=VENT.codigo_vendedor
+	GROUP BY VEND.nombre
+	ORDER BY COUNT(VENT.codigo_vendedor) DESC
 -- TOP 3 VENDEDORES CON MENOS VENTAS
-
-
-
+SELECT TOP 3 VEND.nombre,COUNT(VENT.codigo_vendedor) AS CANTIDAD
+	FROM vendedor VEND, venta VENT
+	WHERE VEND.codigo_vendedor=VENT.codigo_vendedor
+	GROUP BY VEND.nombre
+	ORDER BY COUNT(VENT.codigo_vendedor) ASC
 
 
 

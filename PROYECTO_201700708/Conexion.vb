@@ -339,4 +339,35 @@ Public Class Conexion
         End Try
     End Sub
 
+    Public Sub SetDataGrafica(Query As String, CantProd1 As Label, CantProd2 As Label, CantProd3 As Label, Prod1 As Label, Prod2 As Label, Prod3 As Label)
+        Dim contador As Integer = 1
+        CantProd1.Text = "0"
+        CantProd2.Text = "0"
+        CantProd3.Text = "0"
+        Prod1.Text = ""
+        Prod2.Text = ""
+        Prod3.Text = ""
+        Try
+            execute = New SqlCommand(Query, myConextion)
+            ValoresTabla = execute.ExecuteReader
+            While ValoresTabla.Read
+                If contador = 1 Then
+                    Prod1.Text = ValoresTabla.Item(0).ToString()
+                    CantProd1.Text = ValoresTabla.Item(1).ToString()
+                ElseIf contador = 2 Then
+                    Prod2.Text = ValoresTabla.Item(0).ToString()
+                    CantProd2.Text = ValoresTabla.Item(1).ToString()
+                Else
+                    Prod3.Text = ValoresTabla.Item(0).ToString()
+                    CantProd3.Text = ValoresTabla.Item(1).ToString()
+                End If
+                contador = contador + 1
+            End While
+            ValoresTabla.Close()
+            execute.Clone()
+        Catch ex As Exception
+            MessageBox.Show("NO SE PUDO RECUERAR TOP 3: " & ex.ToString())
+        End Try
+    End Sub
+
 End Class

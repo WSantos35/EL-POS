@@ -25,4 +25,19 @@
         Me.Hide()
         Reporte3.Show()
     End Sub
+
+    Private Sub btnReporte4_Click(sender As Object, e As EventArgs) Handles btnReporte4.Click
+        Reporte4.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnReport5_Click(sender As Object, e As EventArgs) Handles btnReport5.Click
+        Reporte5.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnReport6_Click(sender As Object, e As EventArgs) Handles btnReport6.Click
+        Reporte6.Show()
+        Me.Hide()
+    End Sub
 End Class
