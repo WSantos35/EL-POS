@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "201700708_COSECHAS/1.0.0": {
+        "runtime": {
+          "201700708_COSECHAS.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "201700708_COSECHAS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
